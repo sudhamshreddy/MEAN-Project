@@ -1,0 +1,48 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a routerLink="./home" class="navbar-brand">Nirvana Events</a>
+        </div>
+        <div class = "collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li role="presentation" 
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact : true}"
+                *ngIf="userIsAuthenticated"
+                ><a routerLink="./home"> HOME </a></li>
+                <li role="presentation" routerLinkActive="active" *ngIf="userIsAuthenticated"><a routerLink="./about"> ABOUT US </a></li>
+            <li class="dropdown" appDropdown routerLinkActive="active" *ngIf="userIsAuthenticated">
+                <a class="dropdown-toggle" role="button" #drop>EVENTS<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li role="presentation"><a routerLink="/event/organiser/engagement">ENGAGEMENT</a></li>
+                    <li role="presentation"><a routerLink="/event/organiser/wedding">WEDDING</a></li>
+                    <li role="presentation"><a routerLink="/event/organiser/reception">RECEPTION</a></li>
+                    <li role="presentation"><a routerLink="/event/organiser/birthday">BIRTHDAY PARTY</a></li>
+                    <li role="presentation"><a routerLink="/event/organiser/corporateevent">CORPORATE EVENTS</a></li>
+                </ul>
+            </li>
+            <li role="presentation" routerLinkActive="active" *ngIf="userIsAuthenticated"><a routerLink="./gallery"> GALLERY </a></li>
+            <li role="presentation" routerLinkActive="active" *ngIf="userIsAuthenticated && !isAdmin"><a routerLink="./query"> QUERY US </a></li>
+            <li role="presentation" routerLinkActive="active" *ngIf="userIsAuthenticated && isAdmin"><a routerLink="./queries"> QUERIES </a></li>
+
+            <li role="presentation" routerLinkActive="active" *ngIf="!userIsAuthenticated"><a routerLink="./login"> LOGIN </a></li>
+            <li role="presentation" routerLinkActive="active" *ngIf="!userIsAuthenticated"><a routerLink="./signup"> REGISTER </a></li>
+           </ul>
+           
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown" appDropdown>
+                    <a class="dropdown-toggle" role="button" *ngIf="userIsAuthenticated"><span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li role="presentation" *ngIf="userIsAuthenticated"><a routerLink="/useredit">Edit Profile</a></li>
+                        <li role="presentation" *ngIf="userIsAuthenticated&& isAdmin"><a routerLink="/organiseredit">Add organiser</a></li>
+                        <li role="presentation" style="padding-left:13px;margin-left:0;"><button (click)="onLogout()" style="width: 7pc;
+                            padding-left: 0px;
+                            
+                            outline: none;
+                            margin-left: 0px;">Logout</button></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,148 @@
+
+<div class="container" style="padding-bottom: 5pc;">
+        
+    <div class="row">
+        <div class="col-xs-12">
+            <form (ngSubmit)="onSubmit()" #f = "ngForm">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="form-group">
+                            <label for="organisername">OrganiserName :</label>
+                            <input type="text"
+                                   name="organisername"
+                                   id="organisername"
+                                   class="form-control"
+                                   [ngModel] = "organiser?.name"
+                                   required
+                            >
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                        <div class="col-xs-12">
+                            <div class="form-group">
+                                <label for="imagepath">imagePath :</label>
+                                <input type="text"
+                                       name="imagepath"
+                                       id="imagepath"
+                                       class="form-control"
+                                       [ngModel] = "organiser?.imagePath"
+                                       required
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label for="minimumbudget">Minimum budget that you use to make an event:</label>
+                                    <input type="number"
+                                           name="minimumbudget"
+                                           id="minimumbudget"
+                                           class="form-control"
+                                           [ngModel] = "organiser?.minimumbudget"
+                                           required
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email"
+                                id="email" 
+                                class="form-control"
+                                [ngModel] = "organiser?.email"
+                                name="email"
+                                required
+                                email
+                                #email
+                        >
+                        <span class="help-block" *ngIf="!email.valid && email.touched">Please enter valid email!</span>
+                </div>
+                <div class="row">
+                        <div class="col-xs-12">
+                            <div class="form-group">
+                                <label for="description">Description :</label>
+                                <textarea type="text"
+                                       name="organiserdescription"
+                                       id="description"
+                                       class="form-control"
+                                       [ngModel] = "organiser?.description"
+                                       required
+                                       rows = "4"
+                                ></textarea>
+                            </div>
+                        </div>
+                 </div>
+                 <div class="row">
+                        <div class="col-xs-12">
+                            <div class="form-group">
+                                <label for="location">Location :</label>
+                                <input type="text"
+                                       name="organiserlocation"
+                                       id="location"
+                                       class="form-control"
+                                       [ngModel] = "organiser?.location"
+                                       required
+                                >
+                            </div>
+                        </div>
+                 </div>
+                 <div class="row">
+                        <div class="col-xs-12">
+                            <div class="form-group">
+                                <label for="website">Website Link: </label>
+                                <input type="text"
+                                       name="organiserwebsite"
+                                       id="website"
+                                       class="form-control"
+                                       [ngModel] = "organiser?.websiteLink"
+                                       required
+                                >
+                            </div>
+                        </div>
+                 </div>
+                 <div class="row">
+                        <div class="col-xs-12">
+                            <div class="form-group">
+                                <label for="events">Events undertaken previously: </label>
+                                <label class="checkbox-inline"><input type="checkbox" name="engagement" value="enagagemt" ngModel><span>Engagement</span></label>
+                                <label class="checkbox-inline"><input type="checkbox" name="marriage" value="marriage" ngModel><span>Marriage</span></label>
+                                <label class="checkbox-inline"><input type="checkbox" name="reception" value="reception" ngModel><span>Reception</span></label>
+                                <label class="checkbox-inline"><input type="checkbox" name="birthday" value="birthday" ngModel><span>Birthday</span></label>
+                                <label class="checkbox-inline"><input type="checkbox" name="corporateevents"  value="corporateevents" ngModel><span>Corporate Events</span></label>
+                            </div>
+                        </div>
+                 </div>
+                 <div class="row">
+                        <div class="col-xs-12">
+                            <div class="form-group">
+                                <label for="size">Number of Guests Handling:<span class="caret"></span></label>
+                                 <select  name="organisersize"
+                                          id="size"
+                                          [ngModel] = "organiser?.size"
+                                          required
+                                          class="form-control"
+                                 >
+                                 <option value=50><span>50-100</span></option>
+                                 <option value=100><span>100-250</span></option>
+                                 <option value=250><span>250-500</span></option>
+                                 <option value=500><span>>500</span></option>
+                                 </select>
+                            </div>
+                        </div>
+                 </div>
+                 <button *ngIf="mode === 'create'" type="submit" class="btn btn-success" [disabled]="!f.valid">Register</button> 
+                 <button *ngIf="mode !== 'create'" type="submit" class="btn btn-success" [disabled]="!f.valid">Save</button>|
+                 <button type="button" class="btn btn-danger" (click)="onClear()">Clear</button>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+            <div class="col-xs-12">
+                <div class="alert alert-info" *ngIf="Submitted">
+                    <strong>Registered Succesfully!!</strong>
+                </div>
+            </div>
+        </div>
+</div>

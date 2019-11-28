@@ -1,0 +1,42 @@
+#mainfooter{
+    left: 0;
+    bottom: 0;
+/*	display:block;*/
+    width:100%;
+	position: fixed;
+	
+}
+#innerfoot{
+	width:100%;
+	background-color:#29294a;
+    height:50px;
+    bottom:0;
+}
+#innerfoot h5{
+	color:white;
+	width:50%;
+	margin-top: -18px;
+	padding-top: 26px;
+	margin-left: 45px;
+}
+.fa {
+  padding: 10px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius:50px;
+  float:right;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+#soc{
+	width:50%;
+	float:right;
+	/* padding-bottom:10px; */
+	margin-top: -47px;
+	margin-right: 44px;
+}

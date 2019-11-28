@@ -1,0 +1,11 @@
+.row{
+    /* text-align: center; */
+    align-items: center;
+}
+
+.link
+{
+    text-decoration-line:underline;
+    text-decoration-style: solid;
+}
+ 

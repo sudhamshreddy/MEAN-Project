@@ -1,0 +1,66 @@
+<!-- <div class="container">
+<div class="row">
+ 
+    <div class="col-md-3">
+            <div class="form-group">
+                    
+                     <label for="search">Search by name  <span class="caret"></span></label>
+                     <input type="text"
+                             name="search"
+                             id = "search"
+                       >
+                      
+                     
+            </div>
+    </div>
+    <div class="col-md-3">
+            <div class="form-group">
+                    <label for="budget">Budget <span class="caret"></span></label>
+                    <select name="budget" 
+                            id="budget" 
+                            class="form-control" 
+                             required
+                             [(ngModel)] = "filteredBudget"
+                             (change)="filterChanged('budget',$event.target.value)"
+                    >
+                            <option value=100000><span>100000-500000</span></option>
+                            <option value=500000><span>500000-2000000</span></option>
+                            <option value=2000000><span>2000000-5000000</span></option>
+                            <option value=5000000><span>5000000-10000000</span></option>
+                            <option value=10000000><span>>10000000</span></option>
+                     </select>
+            </div>
+    </div>
+    <div class="col-md-3">
+            <div class="form-group">
+                    <label for="organisationsize">Number of Guests<span class="caret"></span></label>
+                    <select name="organisationsize" 
+                            id="organisationsize" 
+                            class="form-control" 
+                             required
+                             [(ngModel)] = "filteredsize"
+                             (change)="filterChanged('size',$event.target.value)"
+                    >
+                            <option value=25><span>25-50</span></option>
+                            <option value=50><span>50-100</span></option>
+                            <option value=100><span>100-200</span></option>
+                            <option value=200><span>>200</span></option>
+                     </select>
+            </div>
+     </div> 
+      
+   
+   
+  <hr>
+</div>
+<div class="row">
+    <div class="col-lg-5">
+            <app-organiser-list></app-organiser-list>
+    </div>
+    <div class="col-lg-7">
+        <router-outlet></router-outlet>
+        
+    </div>
+</div>
+</div> -->
+<app-organiser-list></app-organiser-list>

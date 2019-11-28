@@ -1,0 +1,51 @@
+<div class="container">
+<form  #f="ngForm" (ngSubmit) = "onSubmit()" >
+    <div class="row">
+        <div class="col-xs-12">
+                <div class="form-group">
+                        <label for="Type">
+                                Choose Type
+                            </label>
+                        <select name="type" 
+                                id="Type" 
+                                class="form-control" 
+                                ngModel
+                                 required
+                                 #field
+                        >
+                        <option value="query"><span>Query</span></option>
+                        <option value="feedback"><span>Feedback</span></option>
+                         </select>
+                </div>
+            
+        </div>
+    </div>
+    <div class="row">
+            <div class="col-xs-12">
+            <label for="text">
+                Leave your comments:
+
+            </label>
+            <textarea class="form-control" rows="5"
+            name="text"
+            id="text"
+            ngModel
+            required
+            >
+
+            </textarea>
+            <br><br>
+
+            <button class="btn btn-primary" type="submit" [disabled]="!f.valid">submit </button> 
+            <div class="row">
+                <div class="col-xs-12">
+                        <div class="alert alert-info" *ngIf="Submitted">
+                                <strong>Thank you ,We will be working on your {{value}}!!</strong>
+                    
+                        </div>
+                </div>
+            </div>      
+        </div>
+    </div>
+</form>
+</div>

@@ -1,0 +1,95 @@
+<div class="container">
+    <div class="row">
+     <form  #f="ngForm" (ngSubmit) = "onSearch()">
+        <div class="col-md-3">
+            <div class="form-group">
+                        <!-- <label for="rating">Rating <span class="caret"></span></label>
+                        <select name="rating" 
+                                id="rating" 
+                                class="form-control" 
+                                 required
+                                [(ngModel)] = "filteredRating"
+                                (change)="filterChanged('rating',$event.target.value)"
+                        >
+                                <option value=1><span>1</span></option>
+                                <option value=2><span>2</span></option>
+                                <option value=3><span>3</span></option>
+                                <option value=4><span>4</span></option>
+                                <option value=5><span>5</span></option>
+                         </select> -->
+                         <label for="search">Search by name  <span class="caret"></span></label>
+                         <input type="text"
+                                 name="search"
+                                 class="form-control"
+                                 id = "search"
+                                 [(ngModel)]="filteredSearch"
+                           >
+                          
+                  </div>       
+        </div>
+        
+        <div class="col-md-3">
+                <div class="form-group">
+                        <label for="budget">Budget <span class="caret"></span></label>
+                        <select name="budget" 
+                                id="budget" 
+                                class="form-control" 
+                                 required
+                                 [(ngModel)] = "filteredBudget"
+                                 
+                        >
+                                <option value=100000><span>100000-500000</span></option>
+                                <option value=500000><span>500000-2000000</span></option>
+                                <option value=2000000><span>2000000-5000000</span></option>
+                                <option value=5000000><span>5000000-10000000</span></option>
+                                <option value=10000000><span>>10000000</span></option>
+                         </select>
+                </div>
+        </div>
+        <div class="col-md-3">
+                <div class="form-group">
+                        <label for="organisationsize">Number of Guests<span class="caret"></span></label>
+                        <select name="organisationsize" 
+                                id="organisationsize" 
+                                class="form-control" 
+                                 required
+                                 [(ngModel)] = "filteredsize"
+                                
+                        >
+                                <option value=25><span>25-50</span></option>
+                                <option value=50><span>50-100</span></option>
+                                <option value=100><span>100-200</span></option>
+                                <option value=200><span>>200</span></option>
+                         </select>
+                </div>
+         </div>
+         <div class="col-md-3">
+                <div class="form-group">
+                        
+                       <button type="submit" class="btn btn-primary" style="margin-top: 25px;">Search</button>
+                       <button type="button" class="btn btn-danger" style="margin-top: 25px;" (click)="onReset()">Reset</button>                
+                 </div>
+         </div> 
+       </form>
+    </div>  
+         <!-- <button class="btn btn-primary pull-right" type="submit" (click)="onSubmit()" style="width: 300px;">Search</button> -->
+</div>   
+      <hr>
+    <span  *ngIf= "organisers?.length === 0" style="font-weight: bolder;">No organisers found!! </span> 
+    <div class="row" *ngIf= "organisers?.length > 0">
+        <div class="col-lg-5">
+             <div class="row">
+                <div class="col-xs-12"> 
+                    <app-organiser-info
+                       *ngFor = "let organiserEl of organisers;let i=index"  
+                       [organiser] = organiserEl
+                       [index]= organiserEl.id
+                    ></app-organiser-info>
+                 </div>
+            </div> 
+        </div>
+        <div class="col-lg-5">
+            <router-outlet></router-outlet>
+            <!-- <app-organiser-edit></app-organiser-edit> -->
+        </div>
+    </div>

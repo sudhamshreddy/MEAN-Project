@@ -1,0 +1,61 @@
+<div class="container-fluid">
+	<div style="height:850px">
+		
+		<div class="container">
+				<div class="row" style="padding-top:2pc;">
+					<div class="col-xs-12">
+						<form (ngSubmit)="onSignUp(f)" #f = "ngForm">
+							<div class="form-group">
+								<label for="name">Name</label>
+								<input type="text" 
+										id="name"
+									   class="form-control"
+									   ngModel
+									   name="name"
+									   required
+								>
+							</div>
+							<div class="form-group">
+									<label for="email">Email</label>
+									<input type="email"
+											id="email" 
+											class="form-control"
+											ngModel
+											name="email"
+											required
+											email
+											#email="ngModel"
+									>
+									<span class="help-block" *ngIf="!email.valid && email.touched">Please enter valid email!</span>
+							</div>
+							<div class="form-group">
+									<label for="mobile">Mobile</label>
+									<input type="number" 
+											id="mobile" 
+											class="form-control"
+											ngModel
+											name="mobile"
+											required
+											#mobile="ngModel"
+									>
+									<span class="help-block" *ngIf="!mobile.valid && mobile.touched">Please enter valid Mobile Number!</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" 
+                                        id="password" 
+                                        class="form-control"
+                                        ngModel
+                                        name="password"
+                                        required
+                                        #password="ngModel"
+                                >
+                                <span class="help-block" *ngIf="!password.valid && password.touched">Please enter valid Password!</span>
+                           </div>
+                           <button class="btn btn-primary" type="submit" [disabled]="!f.valid">Sign up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>    

@@ -1,0 +1,22 @@
+<main>
+<mat-accordion  *ngIf="queries ?.length > 0">
+    <mat-expansion-panel *ngFor="let query of queries">
+        <mat-expansion-panel-header>
+          <mat-panel-description>
+                <span>From :- {{query.email}}</span>
+          </mat-panel-description>
+    </mat-expansion-panel-header>
+       <p>Title - {{query.title}}</p>
+       <hr>
+        <p>{{query.content}}</p>
+                <mat-card>
+                    <mat-form-field>
+                        <textarea matInput rows="6"  [(ngModel)]="content" placeholder="Enter Reply Here !!!"></textarea>
+                    </mat-form-field>
+                    <button mat-raised-button color="accent" (click)="onReply(query.email)">Reply</button>
+                </mat-card>
+    </mat-expansion-panel>
+</mat-accordion>
+<p class="info-text mat-body-1" *ngIf="queries?.length === 0">No Queries !!</p>
+</main>
+ 

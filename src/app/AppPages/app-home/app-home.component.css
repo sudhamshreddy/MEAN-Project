@@ -1,0 +1,256 @@
+@charset "ISO-8859-1";
+@import url('https://fonts.googleapis.com/css?family=Barlow|Dancing+Script|Lobster|Shadows+Into+Light|Supermercado+One&display=swap');
+#imgslide{
+	 width:100%;
+	 height:800px; 
+     /*  font-family: "Helvetica", sans-serif; */
+     /*  background-image:url("imgslider2.jpg");
+      background-repeat:no-repeat;
+      backgroung-image:contain; */
+      position:relative;
+}
+#imgslide img{
+	height:100%;
+	width:100%;
+}
+
+#text{
+	position:absolute;
+	color:white;
+	margin-top: -424px;
+}
+/* #imgslide img {
+      max-width: 100%;
+}
+.slider-container {
+      height: 100%;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+}
+.menu {
+      position: absolute;
+      left: 0;
+      z-index: 900;
+      width: 100%;
+      bottom: 0;
+}
+ .slide {
+      width: 100%;
+      height: 200px;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      z-index: 10;
+      padding: 8em 1em 0;
+      background-size: contain;
+      background-position: 50% 50%;
+      background-repeat:no-repeat;
+      transition: left 0s 0.75s;
+}
+[id^="slide"]:checked + .slide {
+      left: 0;
+      z-index: 100;
+      transition: left 0.65s ease-out;
+}
+.slide-1 {
+      background-image: url("imgslider1.jpg");
+}
+.slide-2 {
+      background-image: url("imgslider2.jpg");
+}
+.slide-3 {
+      background-image: url("imgslider3.jpg");
+} */
+#welcome{
+	width:50%;
+	text-align:center;
+	 margin-left: 367px;
+	 /* background-image:url(wel.jpg);
+	 background-repeat:no-repeat;
+	 background-size:contain; */
+}
+#welcometext{
+	
+	text-align:center;
+}
+#services{
+	height:385px;
+	width:100%;
+}
+#serviceimg{
+	float:left;
+	width:375px;
+	height:385px;
+}
+#serviceimg img{
+	padding-left: 9px;
+    padding-top: 77px;
+    width: 100%;
+    height: 362px;
+}
+#serv{
+	float:right;
+	width: 956px;
+}
+#serv h2{
+	text-align:center;
+	    margin-left: -85px;
+}
+#wp{
+	width:50%;
+	float:left;
+	
+}
+#bp{
+	width:50%;
+	float:right;
+}
+#ce{
+	width:50%;
+	float:left;
+}
+#se{
+	width:50%;
+	float:right;
+}
+#bookyourevent{
+	width:100%;
+	height:81px;
+}
+#bookyourevent h2{
+	width:900px;
+	float:left;
+	margin-left: 94px;
+    font-size: 53px;
+}
+#bookyourevent button{
+	float:left;
+	 margin-top: 23px;
+}
+#footer{
+	
+	/* left: 0;
+  bottom: 0;
+	position:fixed; */
+	width:100%;
+	height: 245px;
+	background-color:#31315f;
+	padding-top:5px;
+	margin-top: -16px;
+}
+#log{
+	display:inline-block;
+	width:25%;
+	float:left;
+	height:200px;
+}
+#log h2{
+	text-align:center;
+	color:white;
+}
+#log h3{
+	text-align:center;
+	color:#e8a325;
+}
+#log p{
+	text-align:center;
+	color:white;
+	margin-left:19px;
+}
+#links{
+	display:inline-block;
+	width:25%;
+	float:left;
+	height:200px;
+	
+}
+#links h2{
+	color:#e8a325;
+}
+#links li a{
+	text-decoration:none;
+	color:white;
+	margin-bottom:1px;
+	text-align:center;
+}
+#links li a:hover{
+	text-decoration:none;
+	color:#e8a325;
+}
+#ourserv{
+	display:inline-block;
+	width:25%;
+	float:left;
+	height:200px;
+}
+#ourserv h2{
+	color:#e8a325;
+}
+#ourserv li a{
+	text-decoration:none;
+	color:white;
+	margin-bottom:1px;
+	text-align:center;
+}
+#ourserv li a:hover{
+	text-decoration:none;
+	color:#e8a325;
+}
+#add{
+	display:inline-block;
+	width:25%;
+	float:left;
+	height:200px;
+	color:white;
+}
+#add h2{
+	color:#e8a325;
+}
+#innerfoot{
+	width:100%;
+	background-color:#29294a;
+	height:75px;
+}
+#innerfoot h5{
+	color:white;
+	width:50%;
+	margin-top: -18px;
+	padding-top: 26px;
+	margin-left: 45px;
+}
+.fa {
+  padding: 10px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius:50px;
+  float:right;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+#soc{
+	width:50%;
+	float:right;
+	/* padding-bottom:10px; */
+	margin-top: -47px;
+	margin-right: 44px;
+}
+
+h3{
+	font-family: lobster;
+	font-size:34px;
+}
+p{
+	font-family:dancing script;
+	
+}
+h2{
+	font-family: lobster;
+    font-size: 30px;
+}

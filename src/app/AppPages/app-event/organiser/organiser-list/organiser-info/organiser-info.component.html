@@ -1,0 +1,17 @@
+<a  
+  style="cursor:pointer;"
+  routerLinkActive = "active"
+  [routerLink] = "[index]"
+  class="list-group-item  clearfix"
+>
+        <div class="pull-left">
+             <h4 class="list-group-item-heading">{{organiser.name}}</h4>
+            <p class="list-group-item-text">
+              <star-rating value="{{organiser.rating}}" checkedcolor="red" uncheckedcolor="black" size="24px"  value=4  readonly="true" (rate)="onRate($event)"></star-rating>
+            </p>
+       </div>
+    <span class="pull-right">
+        <img [src]="organiser.imagePath" alt="{{organiser.name}}" class="img-responsive" style="max-height: 50px;">
+    </span>
+</a>
+
