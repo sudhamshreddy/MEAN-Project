@@ -7,8 +7,8 @@ router.post( "",(req,res,next) =>
 {   
     const otheremail = req.body.email;
     const reply = req.body.content;
-    const myemail = 'dummyforproject.123@gmail.com';
-    const mypassword = 'nirvanaadmin@123';
+    const myemail = 'email';
+    const mypassword = 'password';
   var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
